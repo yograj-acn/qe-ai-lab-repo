@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Breezewood Hotels — Search</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Breezewood Hotels</h1>
+    <p class="tagline">Find your next stay</p>
+  </header>
+
+  <main>
+    <form id="search-form" class="search-form">
+      <div>
+        <label for="destination">Destination</label>
+        <input id="destination" name="destination" type="text" data-testid="destination-input" placeholder="City" required />
+      </div>
+
+      <div>
+        <label for="check-in">Check-in</label>
+        <input id="check-in" name="checkIn" type="date" data-testid="check-in-input" required />
+      </div>
+
+      <div>
+        <label for="check-out">Check-out</label>
+        <input id="check-out" name="checkOut" type="date" data-testid="check-out-input" required />
+      </div>
+
+      <div>
+        <label for="rooms">Rooms</label>
+        <input id="rooms" name="rooms" type="number" min="1" value="1" data-testid="rooms-input" required />
+      </div>
+
+      <div>
+        <label for="adults">Adults</label>
+        <input id="adults" name="adults" type="number" min="1" value="2" data-testid="adults-input" required />
+      </div>
+
+      <button id="search-submit" type="submit" data-testid="search-submit">Search hotels</button>
+    </form>
+
+    <section id="search-results" data-testid="search-results" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

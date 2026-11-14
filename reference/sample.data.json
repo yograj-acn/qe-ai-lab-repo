@@ -1,0 +1,11 @@
+{
+  "testCaseId": "TC-000",
+  "path": "/sample-catalog.html",
+  "data": {
+    "keyword": "sample-keyword",
+    "category": "sample-category"
+  },
+  "expected": {
+    "firstResultContains": "Sample Result"
+  }
+}

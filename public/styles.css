@@ -1,0 +1,171 @@
+:root {
+  color-scheme: light;
+  --ink: #1b2430;
+  --muted: #5b6878;
+  --accent: #0f4c81;
+  --border: #d7dee6;
+  --surface: #ffffff;
+  --page: #f3f6f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--page);
+  color: var(--ink);
+}
+
+.site-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.25rem 2rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.site-header a {
+  color: #dceaff;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  opacity: 0.85;
+}
+
+main {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.search-form label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.search-form button,
+#guest-form button {
+  grid-column: 1 / -1;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.65rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+#search-results {
+  margin-top: 1.5rem;
+}
+
+.property-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.property-card h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.property-card .address {
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.room-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.room-row button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+}
+
+.room-row button:disabled {
+  background: var(--muted);
+  cursor: not-allowed;
+}
+
+#guest-section,
+#confirmation-panel,
+#booking-error {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+#guest-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+#guest-form label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+#guest-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#confirmation-panel {
+  border-color: #2e7d32;
+}
+
+#booking-error {
+  border-color: #c62828;
+  color: #c62828;
+}

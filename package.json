@@ -1,0 +1,26 @@
+{
+  "name": "breezewood-hotels-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Starter app for the AI-Driven Quality Engineering hands-on lab: a local Marriott-style hotel search and booking flow used to practice Playwright test generation, self-healing locators, and Jira escalation.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "npm run start:baseline",
+    "start:baseline": "cross-env APP_MODE=baseline node server/index.js",
+    "start:ui-change": "cross-env APP_MODE=ui-change node server/index.js",
+    "start:booking-defect": "cross-env APP_MODE=booking-defect node server/index.js",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.7.2",
+    "xlsx": "^0.18.5"
+  }
+}

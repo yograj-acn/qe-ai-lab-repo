@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Breezewood Hotels — Rooms</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Breezewood Hotels</h1>
+    <a href="index.html">&larr; Back to search</a>
+  </header>
+
+  <main>
+    <section id="property-section">
+      <h2 id="property-title" data-testid="property-title">Loading property…</h2>
+      <p id="property-address"></p>
+      <div id="room-list" data-testid="room-list"></div>
+    </section>
+
+    <section id="guest-section" data-testid="guest-section" hidden>
+      <h2>Guest details</h2>
+      <form id="guest-form">
+        <div>
+          <label for="guest-name">Full name</label>
+          <input id="guest-name" type="text" data-testid="guest-name-input" required />
+        </div>
+
+        <div>
+          <label for="guest-email">Email</label>
+          <input id="guest-email" type="email" data-testid="guest-email-input" required />
+        </div>
+
+        <div>
+          <label for="guest-phone">Phone</label>
+          <input id="guest-phone" type="tel" data-testid="guest-phone-input" required />
+        </div>
+
+        <button type="submit" data-testid="confirm-booking-submit">Confirm booking</button>
+      </form>
+    </section>
+
+    <section id="confirmation-panel" data-testid="confirmation-panel" hidden>
+      <h2>Booking confirmed</h2>
+      <p>Reservation number: <strong data-testid="reservation-number"></strong></p>
+      <p data-testid="confirmation-property-name"></p>
+      <p data-testid="confirmation-dates"></p>
+    </section>
+
+    <section id="booking-error" data-testid="booking-error" hidden>
+      <p role="alert"></p>
+    </section>
+  </main>
+
+  <script src="rooms.js"></script>
+</body>
+</html>
