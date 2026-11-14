@@ -1,0 +1,15 @@
+{
+  "testCaseId": "TC-001",
+  "path": "/",
+  "data": {
+    "destination": "Bengaluru",
+    "checkIn": "2026-12-10",
+    "checkOut": "2026-12-12",
+    "rooms": "1",
+    "adults": "2"
+  },
+  "expected": {
+    "propertyName": "Breezewood Residency Bengaluru",
+    "nightlyRateVisible": true
+  }
+}
